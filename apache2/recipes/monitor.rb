@@ -41,7 +41,7 @@ cron 'to collect metrics' do
   command '~/aws-scripts-mon/mon-put-instance-data.pl --mem-used-incl-cache-buff --mem-util --disk-space-util --disk-path=/ --from-cron'
 end
 
-template '~/aws-scripts-mon/etc/motd' do
+template '/aws-scripts-mon/awscreds.conf' do
   source 'config.erb'
   owner 'root'
   group 'root'
