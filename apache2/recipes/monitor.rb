@@ -10,9 +10,8 @@ package 'libdatetime-perl' do
   action :install
 end
 
-http_request 'install scripts' do
-  url 'http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.2.zip'
-  action :get
+execute 'install scripts' do
+  command 'curl http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.2.zip -o'
 end
 
 execute 'unzip scripts' do
