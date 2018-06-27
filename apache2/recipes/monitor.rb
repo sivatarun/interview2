@@ -19,12 +19,12 @@ execute 'unzip scripts' do
   command 'unzip CloudWatchMonitoringScripts-1.2.2.zip'
   action :nothing
   notifies :run, 'execute[change directory]', :immediately
-  cwd '~'
+  cwd '/'
 end
 
 execute 'change directory' do
   command 'cd aws-scripts-mon'
-  cwd '~'
+  cwd '/'
   action :nothing
 end
 
