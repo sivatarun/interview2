@@ -1,4 +1,12 @@
-package %w(unzip libwww-perl libdatetime-perl) do
+package 'unzip' do
+  action :install
+end
+
+package  'libwww-perl'  do
+  action :install
+end
+
+package 'libdatetime-perl' do
   action :install
 end
 
