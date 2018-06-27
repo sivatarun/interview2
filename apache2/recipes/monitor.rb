@@ -23,6 +23,7 @@ end
 
 execute 'change directory' do
   command 'cd aws-scripts-mon'
+  cwd '~'
   action :nothing
 end
 
