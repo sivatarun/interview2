@@ -22,15 +22,18 @@ execute 'unzip scripts' do
   cwd '/'
 end
 
-execute 'change directory' do
-  command 'cd aws-scripts-mon'
-  cwd '/'
-  action :nothing
-end
+
+
+#execute 'change directory' do
+ # command 'cd aws-scripts-mon'
+ # cwd '/'
+ # action :nothing
+#end
 
 
 execute 'copy data' do
   command 'cp awscreds.template awscreds.conf'
+  cwd '/aws-scripts-mon'
 end
 
 cron 'to collect metrics' do
