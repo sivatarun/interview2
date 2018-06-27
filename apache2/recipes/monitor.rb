@@ -18,7 +18,7 @@ end
 execute 'unzip scripts' do
   command 'unzip CloudWatchMonitoringScripts-1.2.2.zip'
   action :nothing
-  notifies :run, 'execute[change directory]', :immediately
+  notifies :run, 'execute[copy data]', :immediately
   cwd '/'
 end
 
