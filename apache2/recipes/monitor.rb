@@ -13,12 +13,14 @@ end
 execute 'install scripts' do
   command 'curl http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.2.zip -O'
   notifies :run, 'execute[unzip scripts]', :immediately
+  cwd '~'
 end
 
 execute 'unzip scripts' do
   command 'unzip CloudWatchMonitoringScripts-1.2.2.zip'
   action :nothing
   notifies :run, 'execute[change directory]', :immediately
+  cwd '~'
 end
 
 execute 'change directory' do
