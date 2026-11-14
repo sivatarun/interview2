@@ -1,11 +1,10 @@
-# Agenda Bot: High-Level Flow (for managers)
+# Agenda Bot: High-Level Flow
 
 **What it does:** the user chats with the bot about a meeting they're planning. The bot asks for what it needs and builds three things:
 1. **Who should attend** (suggested people)
 2. **Meeting structure** (sections and minutes for each)
 3. **What to prepare** (agenda points and expected outcomes for each section)
 
-> Diagrams use Mermaid (they render on GitHub). For Google Docs, paste each block into mermaid.live and insert the image.
 > Each diagram box carries a one-line **Pattern** note: the industry approach used at that point. Section 7 has the full table with alternatives and reasons.
 
 ---
